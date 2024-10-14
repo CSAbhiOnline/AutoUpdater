@@ -17,10 +17,23 @@ AutoUpdater is a simple Android library that automatically checks for updates an
 
 ## Installation
 
-1. Add the necessary dependencies in your `build.gradle.kts`: 
+1. Add the dependency in your `build.gradle.kts`: 
 
 ```groovy
 implementation ("com.github.CSAbhiOnline:AutoUpdater:1.0.0")
+```
+2. Add JitPack repository to your project in `settings.gradle.kts` file:
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven{
+            url=uri("https://jitpack.io")
+        }
+    }
+}
 ```
 
 ## Permissions
