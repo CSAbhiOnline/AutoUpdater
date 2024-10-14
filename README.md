@@ -106,3 +106,8 @@ val autoUpdaterManager = AutoUpdaterManager(LocalContext.current)
 You can track the progress of download from `onProgressUpdate: (Int) -> Unit)` lambda from 0 to 100.
 
 5. The latest version app will be automatically installed after the download completes, and the user will see a prompt to install it.
+
+## Warning
+Google Play has strict policies regarding downloading and installing APK files from external sources. Apps that download executable code (like APK files) outside of Google Play's mechanisms (such as Google Play's in-app update API or Play Store installs) can be flagged for "Violation of Malicious Behavior Policy".
+
+### Do not include this library in builds that are going to be published on app stores.
