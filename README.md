@@ -116,7 +116,7 @@ val autoUpdaterManager = AutoUpdaterManager(LocalContext.current)
                                 }
    }
    ```
-You can track the progress of download from `onProgressUpdate: (Int) -> Unit)` lambda from 0 to 100.
+You can track the progress of download from `onProgressUpdate: (Int) -> Unit` lambda from 0 to 100.
 
 5. The latest version app will be automatically installed after the download completes, and the user will see a prompt to install it.
 
