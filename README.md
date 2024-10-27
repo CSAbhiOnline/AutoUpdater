@@ -109,7 +109,7 @@ val autoUpdaterManager = AutoUpdaterManager(LocalContext.current)
                                     autoUpdaterManager.downloadapk(
                                         this@MainActivity,
                                         update!!.apk_url,
-                                        "version/*:${update!!.latestversion}*/"
+                                        "versionName"
                                     ) {
                                         progress = it
                                     }
