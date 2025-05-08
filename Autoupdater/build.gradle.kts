@@ -40,18 +40,19 @@ android {
         jvmTarget = "1.8"
     }
 }
+
 publishing{
     publications{
-        create <MavenPublication>("release"){
-
+        create<MavenPublication>("release"){
             groupId="com.csabhi"
             artifactId="autoupdater"
             version="1.0.0"
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
-
 }
-
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
